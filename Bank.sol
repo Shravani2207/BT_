@@ -9,7 +9,6 @@ contract Bank {
         require(msg.value > 0, "Deposit must be greater than 0");
         balanceOf[msg.sender] += msg.value;
     }
-
     // Withdraw Ether
     function withdraw(uint256 amount) public {
         require(amount <= balanceOf[msg.sender], "Insufficient balance");
